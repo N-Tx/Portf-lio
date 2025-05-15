@@ -7,15 +7,19 @@
     <script src="https://cdn.tailwindcss.com"></script> <!-- CDN do Tailwind -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <link rel="stylesheet" href="styles.css">
-
-
     
-<!-- header/nav-->
-
+    
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="Corpo bg-slate-900 w-full ">
- <header class="hidden md:block w-full bg-slate-950 p-5">
+
+
+
+
+
+
+  <!-- header/nav-->
+ <header class="hidden 2xl:block w-full bg-slate-950 p-5">
   <div class="max-w-screen-xl mx-auto flex justify-between items-center px-4">
     <h3 class="text-white font-mono font-bold text-xl">Nathan Teixeira</h3>
     <ul class="flex space-x-8 text-white">
@@ -26,8 +30,12 @@
     </ul>
   </div>
 </header>
+
+
+
+
 <!--  menu mobile-->
-<header class="block md:hidden w-full bg-blue-950 p-5">
+<header class="block 2xl:hidden w-full bg-blue-950 p-5">
     <div class="w-full flex justify-between items-center px-4">
       <h3 class="text-white font-mono font-bold text-lg">Nathan T.</h3>
       <button id="mobile-menu-toggle" class="text-white">☰</button>
@@ -38,7 +46,8 @@
       <li><a href="#habilidadades" class="hover:underline">Skills</a></li>
       <li><a href="#contacts" class="hover:underline">Contatos</a></li>
     </ul>
-  </header>
+</header>
+
 <!-- script menu -->
 <script>
   const toggle = document.getElementById('mobile-menu-toggle');
@@ -50,7 +59,7 @@
 </script>
 
 <!-- apresentação -->
-    <div class="ml-[150px] px-[100px] mt-28 ">
+<div class="ml-[300px] px-[100px] mt-28 hidden 2xl:block ">
         <h1 class="Hello text-white font-mono text-2xl m-3">Olá, eu sou</h1>
         <h1 class="Nome text-blue-500 text-4xl font-bold mt-3 m-3">Nathan Teixeira</h1>
         <p class="text-2xl text-slate-200
@@ -64,10 +73,29 @@
         </svg>
       </a>
 
-    </div>
+</div>
 
-    <div class="hidden sm:block w-full max-w-[500px] mx-[75rem] my-[-19rem] px-4 ">
-      <lottie-player 
+
+<!-- apresentação mobile -->
+<section class="presentation block 2xl:hidden text-center p-40  ">
+  <div>
+
+    <h1 class="Hello text-white font-mono text-2xl  ">Olá eu sou</h1>
+    <h1 class="Nome text-blue-500 text-4xl font-bold  mt-10">Nathan Teixeira</h1>
+    <p class="text-2xl text-slate-200 mt-10 ">Sou Dev full stack </p>
+    
+
+  </div>
+</section>
+<!-- fim apresentação mobile -->
+
+
+
+<!-- imagem1 -->
+<section class="imagem_1">
+  
+  <div class="absolute top-32 left-[70rem] hidden 2xl:block">
+        <lottie-player 
           src="img/animation.json"
           background="transparent"
           speed="1"
@@ -75,270 +103,335 @@
           loop
           autoplay>
         </lottie-player>
-      
-        
+  </div>
+</section>
+<!-- fim imagem1 -->
+ 
+
+
+ <!-- About me -->
+<section class="about_me hidden 2xl:block">
+  
+  <div>
+
+    <h1 class="relative mr-[150px] translate-x-[62rem] translate-y-72 text-[2rem] font-poppins text-white font-bold inline-block m-3">Sobre Mim
+    <span class="absolute left-0 -bottom-1 w-12 h-[0.15rem] bg-blue-400"></span>
     
-        <div>
-          <h1 class="relative my-10 mx-[-20rem] text-[2rem] font-poppins text-white font-bold inline-block">
-            Sobre Mim
-            <span class="absolute left-0 -bottom-1 w-12 h-[0.15rem] bg-blue-400"></span>
-          </h1>
-        
-          <p class="mt-[-0.25rem] mx-[-20rem] max-w-3xl text-slate-400 text-[1.0rem] text-justify">
-            Sou graduando em Sistemas de Informação pela UFRRJ e estou em busca de uma oportunidade de estágio na área de desenvolvimento. Não tenho preferência entre trabalhar no front-end ou back-end, pois acredito que qualquer experiência será valiosa para meu crescimento. Estou sempre em busca de novos desafios que me ajudem a evoluir e, no futuro, me tornar um desenvolvedor full stack. Gosto de trabalhar com JavaScript, HTML, TailwindCSS e estou me aperfeiçoando em React e TypeScript para desenvolvimento web.
-          </p>
-        
-        <div class="relative right-80">
-          <a href="https://www.linkedin.com/in/nathan-teixeira-8505b9241/?trk=opento_sprofile_topcard" target="_blank"
+    </h1>      
+    <p class="relative translate-x-[62rem]  translate-y-72 w-[36rem] text-slate-400 text-[1.0rem] text-justify m-3 ">Sou graduando em Sistemas de Informação pela UFRRJ e estou em busca de uma oportunidade de estágio na área de desenvolvimento. Não tenho preferência entre trabalhar no front-end ou back-end, pois acredito que qualquer experiência será valiosa para meu crescimento. Estou sempre em busca de novos desafios que me ajudem a evoluir e, no futuro, me tornar um desenvolvedor full stack. Gosto de trabalhar com JavaScript, HTML, TailwindCSS e estou me aperfeiçoando em React e TypeScript para desenvolvimento web.
+
+      <a href="https://www.linkedin.com/in/nathan-teixeira-8505b9241/?trk=opento_sprofile_topcard" target="_blank"
          class="inline-flex items-center px-5 mt-11 py-3 text-white font-medium rounded-md bg-gradient-to-r from-[#0f172a] to-[#0284c7] hover:opacity-90 transition">Visitar Linkedin
           <svg class="ml-2 w-4 h-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" d="M6.707 16.707a1 1 0 010-1.414L12.586 10 6.707 4.707a1 1 0 011.414-1.414l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0z" clip-rule="evenodd" />
           </svg>
           </a>
-        </div>
-        </div>
+    </p>
 
-
-        <div class="relative right-[60rem] top-[-19rem] w-96 h-auto">
-          <img src="img/img_tec_att.png" alt="imagem flutuante" class="animate-float w-full h-auto">
-        </div>
-
-
-
-        
-
-    </div>
-
-
-
-    <div class="">
-
-      <h1 class="font-poppins  text-[2rem] text-white font-bold   relative mx-60 mt-32 m-3 ">Serviços
-        <span class="absolute left-0 -bottom-1 w-12 h-[0.15rem] bg-blue-400"></span>
-      </h1>
-      <p class="relative mx-60 mt-[1.5rem] max-w-3xl text-slate-400 text-[1.0rem] text-justify w-[35rem] h-auto">Participei de projetos acadêmicos, criei portfólios personalizados e desenvolvi sites e aplicações em equipe na graduação como parte do meu aprendizado. Alguns desses projetos estão disponíveis no meu GitHub, com um resumo de cada um ao lado, sinta-se a vontade para vizualizar todos.</p>
-
-    </div>
-
-
-<!-- Carrossel de Serviços com Tailwind CSS -->
-<div class=" hidden md:block mx-[66rem] -my-52 bg-blue-950 ">
-  <div class="relative w-[40rem] h-auto">
-
-    <!-- Card do Projeto -->
-    <div id="card" class="bg-slate-800 rounded-2xl shadow-xl p-6 transition duration-500 ease-in-out min-h-[28rem] flex flex-col justify-between">
-      <span id="card-tag" class="flex justify-center bg-blue-200 text-blue-900 text-xs font-semibold px-3 py-1 rounded-full mb-3 w-16">Site</span>
-      <img id="card-image" src="img/bsday.png" alt="BSDay" class="mb-4 w-full h-80 rounded-xl ">
-      <h3 id="card-title" class="text-white font-bold text-lg mb-2 text-center">BSDay - Evento Acadêmico</h3>
-      <p id="card-desc" class="text-sm text-slate-400 text-center">Site criado em equipe usando Git, GitHub, TailwindCSS e JS. Projeto completo e responsivo com grande aprendizado em colaboração e versionamento.</p>
-    </div>
-
-    <!-- Botão Esquerdo -->
-    <button onclick="prevCard()" class="absolute top-1/2 left-[-3rem] transform -translate-y-1/2 bg-blue-400 text-white w-10 h-10 rounded-lg flex items-center justify-center z-10"><p> < </p>
     
-    </button>
-
-    <!-- Botão Direito -->
-    <button onclick="nextCard()" class="absolute top-1/2 right-[-3rem] transform -translate-y-1/2 bg-blue-400 text-white w-10 h-10 rounded-lg flex items-center justify-center z-10">
-      <p>></p>
-    </button>
-  </div>
+          
+    </div>
+        
 </div>
+</section>
+<!-- fim About me -->
 
 
-
- <div class="">
-
-      <h1 class="font-poppins  text-[2rem] text-white font-bold   relative mx-60 mt-32 m-3 ">Tecnologias
-        <span class="absolute left-0 -bottom-1 w-12 h-[0.15rem] bg-blue-400"></span>
+ <!-- About me mobile -->
+<section class="about_me_mobile block 2xl:hidden text-center m-10">
+  <div>
+    <div class="relative inline-block">
+      <h1 class="text-[2rem] font-poppins text-white font-bold">
+        Sobre Mim
       </h1>
+      <span class="absolute right-[5rem] bottom-0 w-1/2 h-[3px] bg-blue-500"></span>
+    </div>
 
+    <p class="text-slate-400 text-[1.0rem] text-center m-10">
+      Sou graduando em Sistemas de Informação pela UFRRJ e estou em busca de uma oportunidade de estágio na área de desenvolvimento. Não tenho preferência entre trabalhar no front-end ou back-end, pois acredito que qualquer experiência será valiosa para meu crescimento. Estou sempre em busca de novos desafios que me ajudem a evoluir e, no futuro, me tornar um desenvolvedor full stack. Gosto de trabalhar com JavaScript, HTML, TailwindCSS e estou me aperfeiçoando em React e TypeScript para desenvolvimento web.
+    </p>
+  
+    
   </div>
+</section>
+<!-- fim About me mobile -->
 
-<!-- Container Pai -->
-<div class="skills-grid-container flex items-center min-h-screen mx-[14rem]   -my-80">
 
-  <!-- Grade de Skills -->
-  <div class="grid grid-cols-4 gap-6">
-
-    <!-- Python -->
-    <div class="relative w-20 h-20 rounded-full" style="--progress: 45">
-      <div class="absolute inset-0 rounded-full bg-[conic-gradient(#00bfff_calc(var(--progress)*1%),#1e293b_0%)]"></div>
-      <div class="absolute inset-[3px] bg-[#0f172a] rounded-full flex items-center justify-center">
-        <img src="img/pý.png" alt="Python" class="w-8">
-      </div>
+<!--Imagem2-->
+<section>
+  
+   <div class=" w-96 h-auto ml-[300px]  hidden 2xl:block  ">
+      <img src="img/img_tec_att.png" alt="imagem flutuante" class="animate-float w-full h-auto">
     </div>
-
-    <!-- git-->
-    <div class="relative w-20 h-20 rounded-full" style="--progress: 60">
-      <div class="absolute inset-0 rounded-full bg-[conic-gradient(#00bfff_calc(var(--progress)*1%),#1e293b_0%)]"></div>
-      <div class="absolute inset-[3px] bg-[#0f172a] rounded-full flex items-center justify-center text-cyan-400 text-xl">
-        <img src="img/git.png" alt="" class="w-8">
-      </div>
-    </div>
-
-    <!-- JavaScript -->
-    <div class="relative w-20 h-20 rounded-full" style="--progress: 25">
-      <div class="absolute inset-0 rounded-full bg-[conic-gradient(#00bfff_calc(var(--progress)*1%),#1e293b_0%)]"></div>
-      <div class="absolute inset-[3px] bg-[#0f172a] rounded-full flex items-center justify-center">
-        <img src="img/js.png" alt="JavaScript" class="w-8">
-      </div>
-    </div>
-
-    <!-- TypeScript -->
-    <div class="relative w-20 h-20 rounded-full" style="--progress: 10">
-      <div class="absolute inset-0 rounded-full bg-[conic-gradient(#00bfff_calc(var(--progress)*1%),#1e293b_0%)]"></div>
-      <div class="absolute inset-[3px] bg-[#0f172a] rounded-full flex items-center justify-center text-cyan-400 text-xl">
-        <img src="img/ts.png" alt="TS" class="w-8">
-      </div>
-    </div>
-
-    <!-- html -->
-    <div class="relative w-20 h-20 rounded-full" style="--progress: 85">
-      <div class="absolute inset-0 rounded-full bg-[conic-gradient(#00bfff_calc(var(--progress)*1%),#1e293b_0%)]"></div>
-      <div class="absolute inset-[3px] bg-[#0f172a] rounded-full flex items-center justify-center text-cyan-400 text-2xl">
-        <img src="img/html.png" alt="" class="w-8">
-      </div>
-    </div>
-
-    <!-- CSS -->
-    <div class="relative w-20 h-20 rounded-full" style="--progress: 85">
-      <div class="absolute inset-0 rounded-full bg-[conic-gradient(#00bfff_calc(var(--progress)*1%),#1e293b_0%)]"></div>
-      <div class="absolute inset-[3px] bg-[#0f172a] rounded-full flex items-center justify-center text-cyan-400 text-lg">
-        <img src="img/css.png" alt="" class="w-10">
-      </div>
-    </div>
-
-    <!-- taiwindcss -->
-    <div class="relative w-20 h-20 rounded-full" style="--progress: 88">
-      <div class="absolute inset-0 rounded-full bg-[conic-gradient(#00bfff_calc(var(--progress)*1%),#1e293b_0%)]"></div>
-      <div class="absolute inset-[3px] bg-[#0f172a] rounded-full flex items-center justify-center">
-        <img src="img/tailwindcss.png" alt="GitHub" class="w-8">
-      </div>
-    </div>
-
-    <!-- linux -->
-    <div class="relative w-20 h-20 rounded-full" style="--progress: 50">
-      <div class="absolute inset-0 rounded-full bg-[conic-gradient(#00bfff_calc(var(--progress)*1%),#1e293b_0%)]"></div>
-      <div class="absolute inset-[3px] bg-[#0f172a] rounded-full flex items-center justify-center text-cyan-400 text-2xl">
-        <img src="img/linux.png" alt="" class="w-8">
-      </div>
-    </div>
-
-  </div>
-</div>
+      
+</section>
+<!--Fim imagem2-->
 
 
-
-<div class=" text-white font-poppins mx-[67rem] mr-48 -my-[34rem] hidden md:block">
-  <h1 class="text-[2rem] font-bold relative">
-    Contatos
+<div class="flex flex-col items-center justify-center text-center px-4 py-20 translate-y-28">
+  
+  <h1 class="font-poppins text-[2rem] text-white font-bold relative inline-block mb-4">
+    Serviços
     <span class="absolute left-0 -bottom-1 w-12 h-[0.15rem] bg-blue-400"></span>
   </h1>
+  
+  <p class="max-w-3xl text-slate-400 text-[1.0rem]">
+    Participei de projetos acadêmicos, criei portfólios personalizados e desenvolvi sites e aplicações em equipe na graduação como parte do meu aprendizado. Alguns desses projetos estão disponíveis no meu GitHub, com um resumo de cada um ao lado, sinta-se à vontade para visualizar todos.
+  </p>
 
-  <div class="w-[30rem] h-auto hidden md:block">
-    <p class="mt-4 text-slate-400 ">
-      Entre em contato para dúvidas, sugestões, orçamentos ou suporte.
+</div>
+
+
+<!-- Container que centraliza -->
+<div class="relative flex justify-center items-center h-screen">
+
+  <!-- Botão Esquerdo -->
+  <button onclick="prevCard()" class="absolute left-[30rem] top-1/2 -translate-y-1/2  bg-sky-950 text-white w-10 h-10 rounded-full  items-center justify-center shadow-md hover:bg-blue-600 transition hidden md:block">
+    <span class="text-lg font-bold">&lt;</span>
+  </button>
+
+  <!-- Card -->
+  <div id="card" class="bg-slate-800 rounded-2xl shadow-xl p-6 min-h-[28rem] flex flex-col justify-center w-full max-w-2xl">
+    <span id="card-tag" class="flex justify-center bg-blue-200 text-blue-900 text-xs font-semibold px-3 py-1 rounded-full mb-3 w-16">Site</span>
+    
+    <img id="card-image" src="img/bsday.png" alt="BSDay" class="mb-4 w-full h-80 rounded-xl">
+    
+    <h3 id="card-title" class="text-white font-bold text-lg mb-2 text-center">
+      BSDay - Evento Acadêmico
+    </h3>
+    
+    <p id="card-desc" class="text-sm text-slate-400 text-center">
+      Site criado em equipe usando Git, GitHub, TailwindCSS e JS. Projeto completo e responsivo com grande aprendizado em colaboração e versionamento.
     </p>
   </div>
 
-  <div class="flex gap-8 mt-6">
-    <a href="https://github.com/N-Tx">
-    <img src="img/github.png" alt="GitHub" class="w-8 h-8">
+  <!-- Botão Direito -->
+  <button onclick="nextCard()" class="hidden md:block absolute right-[30rem] top-1/2 -translate-y-1/2 bg-sky-950 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md hover:bg-blue-600 transition">
+    <span class="text-lg font-bold">&gt;</span>
+  </button>
 
-    </a>
 
-    <a href="https://www.instagram.com/n4thazinho/">
-    <img src="img/instagram.png" alt="Instagram" class="w-8 h-8">
-    </a>
+  <!-- Botão Esquerdo -->
+<button 
+  onclick="prevCard()" 
+  class="absolute left-4 top-1/2 -translate-y-1/2 bg-sky-950 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md hover:bg-blue-600 transition md:left-[30rem]">
+  <span class="text-lg font-bold">&lt;</span>
+</button>
 
-    <a href="https://mail.google.com/mail/?view=cm&to=nathanoliveirafacul@gmail.com&su=Contato%20via%20site&body=Olá%20Nathan,%20gostaria%20de%20entrar%20em%20contato%20sobre..." target="_blank">
-  <img src="img/gmail.png" alt="Enviar e-mail" class="w-8 h-8">
-    </a>  
-    <a href="">
-    <img src="img/tt.png" alt="Twitter" class="w-8 h-8">
-    </a>
-  </div>
+<!-- Botão Direito -->
+<button 
+  onclick="nextCard()" 
+  class="absolute right-4 top-1/2 -translate-y-1/2 bg-sky-950 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md hover:bg-blue-600 transition md:right-[30rem]">
+  <span class="text-lg font-bold">&gt;</span>
+</button>
+
+
 </div>
 
 
 
 
- <!-- Footer -->
-    <footer class="bg-slate-950 text-center text-slate-400 py-6 mt-[54.5rem]">
+<!-- Container Flex para alinhar lado a lado -->
+<div class="flex flex-col md:flex-row justify-center items-start gap-x-10 px-4">
+  
+  <!-- Section Tecnologias -->
+  <section class="hidden md:block py-20 w-full md:w-1/2 -mt-12">
+    <!-- Título Centralizado -->
+    <div class="flex flex-col items-center justify-center text-center px-4 mb-10">
+      <h1 class="font-poppins text-[2rem] text-white font-bold relative inline-block">
+        Tecnologias
+        <span class="absolute left-0 -bottom-1 w-12 h-[0.15rem] bg-blue-400"></span>
+      </h1>
+    </div>
+
+    <!-- Container Centralizado -->
+    <div class="flex justify-center">
+      <!-- Grade de Skills -->
+      <div class="grid grid-cols-4 gap-4">
+        <!-- Cada skill -->
+        <div class="relative w-20 h-20 rounded-full" style="--progress: 45">
+          <div class="absolute inset-0 rounded-full bg-[conic-gradient(#00bfff_calc(var(--progress)*1%),#1e293b_0%)]"></div>
+          <div class="absolute inset-[3px] bg-[#0f172a] rounded-full flex items-center justify-center">
+            <img src="img/pý.png" alt="Python" class="w-12">
+          </div>
+        </div>
+
+        <div class="relative w-20 h-20 rounded-full" style="--progress: 60">
+          <div class="absolute inset-0 rounded-full bg-[conic-gradient(#00bfff_calc(var(--progress)*1%),#1e293b_0%)]"></div>
+          <div class="absolute inset-[3px] bg-[#0f172a] rounded-full flex items-center justify-center">
+            <img src="img/git.png" alt="Git" class="w-8">
+          </div>
+        </div>
+
+        <div class="relative w-20 h-20 rounded-full" style="--progress: 25">
+          <div class="absolute inset-0 rounded-full bg-[conic-gradient(#00bfff_calc(var(--progress)*1%),#1e293b_0%)]"></div>
+          <div class="absolute inset-[3px] bg-[#0f172a] rounded-full flex items-center justify-center">
+            <img src="img/js.png" alt="JavaScript" class="w-8">
+          </div>
+        </div>
+
+        <div class="relative w-20 h-20 rounded-full" style="--progress: 10">
+          <div class="absolute inset-0 rounded-full bg-[conic-gradient(#00bfff_calc(var(--progress)*1%),#1e293b_0%)]"></div>
+          <div class="absolute inset-[3px] bg-[#0f172a] rounded-full flex items-center justify-center">
+            <img src="img/ts.png" alt="TypeScript" class="w-8">
+          </div>
+        </div>
+
+        <div class="relative w-20 h-20 rounded-full" style="--progress: 85">
+          <div class="absolute inset-0 rounded-full bg-[conic-gradient(#00bfff_calc(var(--progress)*1%),#1e293b_0%)]"></div>
+          <div class="absolute inset-[3px] bg-[#0f172a] rounded-full flex items-center justify-center">
+            <img src="img/html.png" alt="HTML" class="w-8">
+          </div>
+        </div>
+
+        <div class="relative w-20 h-20 rounded-full" style="--progress: 85">
+          <div class="absolute inset-0 rounded-full bg-[conic-gradient(#00bfff_calc(var(--progress)*1%),#1e293b_0%)]"></div>
+          <div class="absolute inset-[3px] bg-[#0f172a] rounded-full flex items-center justify-center">
+            <img src="img/css.png" alt="CSS" class="w-10">
+          </div>
+        </div>
+
+        <div class="relative w-20 h-20 rounded-full" style="--progress: 88">
+          <div class="absolute inset-0 rounded-full bg-[conic-gradient(#00bfff_calc(var(--progress)*1%),#1e293b_0%)]"></div>
+          <div class="absolute inset-[3px] bg-[#0f172a] rounded-full flex items-center justify-center">
+            <img src="img/tailwindcss.png" alt="Tailwind CSS" class="w-8">
+          </div>
+        </div>
+
+        <div class="relative w-20 h-20 rounded-full" style="--progress: 50">
+          <div class="absolute inset-0 rounded-full bg-[conic-gradient(#00bfff_calc(var(--progress)*1%),#1e293b_0%)]"></div>
+          <div class="absolute inset-[3px] bg-[#0f172a] rounded-full flex items-center justify-center">
+            <img src="img/linux.png" alt="Linux" class="w-8">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Contatos -->
+<section class="mt-20 -ml-20 2xl:mt-5 w-full md:w-1/2 justify-center hidden md:block">
+  <div class="text-white w-full max-w-[30rem]">
+    <h1 class="text-[2rem] font-bold relative text-center">
+      Contatos
+      <span class="absolute left-1/2 transform -translate-x-1/2 -bottom-1 w-12 h-[0.15rem] bg-blue-400"></span>
+    </h1>
+
+    <div class="mt-4">
+      <p class="text-slate-400">
+        Entre em contato para dúvidas, sugestões, orçamentos ou suporte.
+      </p>
+    </div>
 
 
-        <p>&copy; 2025 Nathan Teixeira. Todos os direitos reservados.</p>
+
+
+
+ 
+
+
+    <!-- Formulário de Contato -->
+    <form class="mt-8 hidden md:block flex-col gap-6 ">
+      <div class="flex flex-col">
+        <label class="text-sm text-blue-400 mb-1" for="nome">Nome</label>
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          class="bg-transparent border border-blue-400 text-white px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500"
+          placeholder="Digite seu nome completo"
+        />
+      </div>
+
+      <div class="flex flex-col">
+        <label class="text-sm text-blue-400 mb-1" for="mensagem">Mensagem</label>
+        <textarea
+          id="mensagem"
+          name="mensagem"
+          rows="4"
+          class="bg-transparent border border-blue-400 text-white px-4 py-2 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-cyan-500"
+          placeholder="Digite sua mensagem"
+
+          
+        ></textarea>
+
+        <a href="https://github.com/N-Tx" target="_blank"
+         class="m-3 inline-flex items-center px-5 mt-10 py-3 text-white font-medium rounded-md bg-gradient-to-r from-[#0f172a] to-[#0284c7] hover:opacity-90 transition w-32">
+        Enviar 
+        <svg class="ml-2 w-4 h-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M6.707 16.707a1 1 0 010-1.414L12.586 10 6.707 4.707a1 1 0 011.414-1.414l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+        </svg>
+      </a>
+      </div>
+     
+
+
+
+
+
+
+
+ 
+
+
+  
+ 
+
+
+ 
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
         
-        
-        
-    </footer>
-
-
-
-
-
-
-
-
-<!-- Script do Carrossel -->
-<script>
-  const cards = [
-    {
-      image: 'img/bsday.png',
-      title: 'BSDay - Evento Acadêmico',
-      desc: 'Site criado em equipe usando Git, GitHub, TailwindCSS e JS. Projeto completo e responsivo com grande aprendizado em colaboração e versionamento.',
-      tag: 'Site'
-    },
-    {
-      image: 'img/sportclubcfundo.png',
-      title: 'RuralSportClub - Sistema de Reservas',
-      desc: 'Sistema de reserva de quadras para a UFRRJ. Idealizado para facilitar o uso das quadras, com backend em Python. Ainda em desenvolvimento.',
-      tag: 'Sistema'
-    },
-    {
-      image: 'img/LOGO_RESTAURANTE.png',
-      title: 'Restaurante de Comidas Típicas Gaúchas',
-      desc: 'Um dos meus primeiros projetos web: um site de restaurante feito apenas com HTML e CSS puro, focado em pratos típicos da cultura gaúcha.',
-      tag: 'Site'
-    }
-  ];
-
-  let current = 0;
-
-  function updateCard(index) {
-    const card = cards[index];
-    document.getElementById('card-image').src = card.image;
-    document.getElementById('card-title').textContent = card.title;
-    document.getElementById('card-desc').textContent = card.desc;
-    document.getElementById('card-tag').textContent = card.tag;
-  }
-
-  function nextCard() {
-    current = (current + 1) % cards.length;
-    updateCard(current);
-  }
-
-  function prevCard() {
-    current = (current - 1 + cards.length) % cards.length;
-    updateCard(current);
-  }
-</script>
-
-
-
     
         
-
         
       
-        
-        
-        
+
 
         
 
-    
+  
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
         
+
+
+
+<script src="script.js"></script>
 </body>
 </html>
