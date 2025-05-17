@@ -11,6 +11,10 @@
     
     <link rel="stylesheet" href="styles.css">
 </head>
+
+
+
+<section id="topo"></section>
 <body class="Corpo bg-slate-900 w-full ">
 
 
@@ -23,9 +27,9 @@
   <div class="max-w-screen-xl mx-auto flex justify-between items-center px-4">
     <h3 class="text-white font-mono font-bold text-xl">Nathan Teixeira</h3>
     <ul class="flex space-x-8 text-white">
-      <li><a href="#about" class="hover:underline underline-offset-4 decoration-blue-400">Sobre mim</a></li>
+      <li><a href="#about_me" class="hover:underline underline-offset-4 decoration-blue-400">Sobre mim</a></li>
       <li><a href="#service" class="hover:underline underline-offset-4 decoration-blue-400">Serviços</a></li>
-      <li><a href="#habilidadades" class="hover:underline underline-offset-4 decoration-blue-400">Skills</a></li>
+      <li><a href="#Skills" class="hover:underline underline-offset-4 decoration-blue-400">Skills</a></li>
       <li><a href="#contacts" class="hover:underline underline-offset-4 decoration-blue-400">Contatos</a></li>
     </ul>
   </div>
@@ -35,7 +39,7 @@
 
 
 <!--  menu mobile-->
-<header class="block 2xl:hidden w-full bg-blue-950 p-5">
+<header class="block 2xl:hidden w-full bg-blue-950 p-5 ">
     <div class="w-full flex justify-between items-center px-4">
       <h3 class="text-white font-mono font-bold text-lg">Nathan T.</h3>
       <button id="mobile-menu-toggle" class="text-white">☰</button>
@@ -59,6 +63,7 @@
 </script>
 
 <!-- apresentação -->
+ <section id="about_me">
 <div class="ml-[300px] px-[100px] mt-28 hidden 2xl:block ">
         <h1 class="Hello text-white font-mono text-2xl m-3">Olá, eu sou</h1>
         <h1 class="Nome text-blue-500 text-4xl font-bold mt-3 m-3">Nathan Teixeira</h1>
@@ -74,10 +79,11 @@
       </a>
 
 </div>
+</section>
 
 
 <!-- apresentação mobile -->
-<section class="presentation block 2xl:hidden text-center p-40  ">
+<section class="presentation block 2xl:hidden text-center p-20  ">
   <div>
 
     <h1 class="Hello text-white font-mono text-2xl  ">Olá eu sou</h1>
@@ -137,8 +143,33 @@
 <!-- fim About me -->
 
 
+
+ <section class="imagem_1">
+  
+  <div class="flex md:hidden justify-center">
+
+        <lottie-player 
+          src="img/animation.json"
+          background="transparent"
+          speed="1"
+          style="width: 300px; height: 300px;"
+          loop
+          autoplay>
+        </lottie-player>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
  <!-- About me mobile -->
-<section class="about_me_mobile block 2xl:hidden text-center m-10">
+<section class="about_me_mobile block 2xl:hidden text-center mt-40 m-10">
   <div>
     <div class="relative inline-block">
       <h1 class="text-[2rem] font-poppins text-white font-bold">
@@ -168,6 +199,8 @@
 <!--Fim imagem2-->
 
 
+<!--serviços -->
+<section id="service">
 <div class="flex flex-col items-center justify-center text-center px-4 py-20 translate-y-28">
   
   <h1 class="font-poppins text-[2rem] text-white font-bold relative inline-block mb-4">
@@ -180,6 +213,7 @@
   </p>
 
 </div>
+</section>
 
 
 <!-- Container que centraliza -->
@@ -206,7 +240,7 @@
   </div>
 
   <!-- Botão Direito -->
-  <button onclick="nextCard()" class="hidden md:block absolute right-[30rem] top-1/2 -translate-y-1/2 bg-sky-950 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md hover:bg-blue-600 transition">
+  <button onclick="nextCard()" class="flex md:hidden absolute right-[30rem] top-1/2 -translate-y-1/2 bg-sky-950 text-white w-10 h-10 rounded-full  items-center justify-center shadow-md hover:bg-blue-600 transition">
     <span class="text-lg font-bold">&gt;</span>
   </button>
 
@@ -231,12 +265,12 @@
 
 
 
+
 <!-- Container Flex para alinhar lado a lado -->
-<div class="flex flex-col md:flex-row justify-center items-start gap-x-10 px-4">
-  
+<div class="flex flex-col md:flex-row justify-center items-start gap-x-10 px-4 w-full max-w-7xl mx-auto">
+
   <!-- Section Tecnologias -->
-  <section class="hidden md:block py-20 w-full md:w-1/2 -mt-12">
-    <!-- Título Centralizado -->
+  <section id="Skills" class="hidden md:block py-20 w-full md:w-1/2 -mt-12">
     <div class="flex flex-col items-center justify-center text-center px-4 mb-10">
       <h1 class="font-poppins text-[2rem] text-white font-bold relative inline-block">
         Tecnologias
@@ -244,11 +278,9 @@
       </h1>
     </div>
 
-    <!-- Container Centralizado -->
     <div class="flex justify-center">
-      <!-- Grade de Skills -->
       <div class="grid grid-cols-4 gap-4">
-        <!-- Cada skill -->
+        <!-- Python -->
         <div class="relative w-20 h-20 rounded-full" style="--progress: 45">
           <div class="absolute inset-0 rounded-full bg-[conic-gradient(#00bfff_calc(var(--progress)*1%),#1e293b_0%)]"></div>
           <div class="absolute inset-[3px] bg-[#0f172a] rounded-full flex items-center justify-center">
@@ -256,6 +288,7 @@
           </div>
         </div>
 
+        <!-- Git -->
         <div class="relative w-20 h-20 rounded-full" style="--progress: 60">
           <div class="absolute inset-0 rounded-full bg-[conic-gradient(#00bfff_calc(var(--progress)*1%),#1e293b_0%)]"></div>
           <div class="absolute inset-[3px] bg-[#0f172a] rounded-full flex items-center justify-center">
@@ -263,6 +296,7 @@
           </div>
         </div>
 
+        <!-- JavaScript -->
         <div class="relative w-20 h-20 rounded-full" style="--progress: 25">
           <div class="absolute inset-0 rounded-full bg-[conic-gradient(#00bfff_calc(var(--progress)*1%),#1e293b_0%)]"></div>
           <div class="absolute inset-[3px] bg-[#0f172a] rounded-full flex items-center justify-center">
@@ -270,6 +304,7 @@
           </div>
         </div>
 
+        <!-- TypeScript -->
         <div class="relative w-20 h-20 rounded-full" style="--progress: 10">
           <div class="absolute inset-0 rounded-full bg-[conic-gradient(#00bfff_calc(var(--progress)*1%),#1e293b_0%)]"></div>
           <div class="absolute inset-[3px] bg-[#0f172a] rounded-full flex items-center justify-center">
@@ -277,6 +312,7 @@
           </div>
         </div>
 
+        <!-- HTML -->
         <div class="relative w-20 h-20 rounded-full" style="--progress: 85">
           <div class="absolute inset-0 rounded-full bg-[conic-gradient(#00bfff_calc(var(--progress)*1%),#1e293b_0%)]"></div>
           <div class="absolute inset-[3px] bg-[#0f172a] rounded-full flex items-center justify-center">
@@ -284,6 +320,7 @@
           </div>
         </div>
 
+        <!-- CSS -->
         <div class="relative w-20 h-20 rounded-full" style="--progress: 85">
           <div class="absolute inset-0 rounded-full bg-[conic-gradient(#00bfff_calc(var(--progress)*1%),#1e293b_0%)]"></div>
           <div class="absolute inset-[3px] bg-[#0f172a] rounded-full flex items-center justify-center">
@@ -291,6 +328,7 @@
           </div>
         </div>
 
+        <!-- Tailwind CSS -->
         <div class="relative w-20 h-20 rounded-full" style="--progress: 88">
           <div class="absolute inset-0 rounded-full bg-[conic-gradient(#00bfff_calc(var(--progress)*1%),#1e293b_0%)]"></div>
           <div class="absolute inset-[3px] bg-[#0f172a] rounded-full flex items-center justify-center">
@@ -298,6 +336,7 @@
           </div>
         </div>
 
+        <!-- Linux -->
         <div class="relative w-20 h-20 rounded-full" style="--progress: 50">
           <div class="absolute inset-0 rounded-full bg-[conic-gradient(#00bfff_calc(var(--progress)*1%),#1e293b_0%)]"></div>
           <div class="absolute inset-[3px] bg-[#0f172a] rounded-full flex items-center justify-center">
@@ -309,63 +348,76 @@
   </section>
 
   <!-- Section Contatos -->
-<section class="mt-20 -ml-20 2xl:mt-5 w-full md:w-1/2 justify-center hidden md:block">
-  <div class="text-white w-full max-w-[30rem]">
-    <h1 class="text-[2rem] font-bold relative text-center">
-      Contatos
-      <span class="absolute left-1/2 transform -translate-x-1/2 -bottom-1 w-12 h-[0.15rem] bg-blue-400"></span>
-    </h1>
+  <section id="contacts" class="py-20 w-full md:w-1/2 hidden md:flex flex-col items-center text-white">
+    <div class="w-full max-w-[30rem]">
+      <h1 class="text-[2rem] font-bold relative text-center">
+        Contatos
+        <span class="absolute left-1/2 transform -translate-x-1/2 -bottom-1 w-12 h-[0.15rem] bg-blue-400"></span>
+      </h1>
 
-    <div class="mt-4">
-      <p class="text-slate-400">
-        Entre em contato para dúvidas, sugestões, orçamentos ou suporte.
-      </p>
-    </div>
-
-
-
-
-
- 
-
-
-    <!-- Formulário de Contato -->
-    <form class="mt-8 hidden md:block flex-col gap-6 ">
-      <div class="flex flex-col">
-        <label class="text-sm text-blue-400 mb-1" for="nome">Nome</label>
-        <input
-          type="text"
-          id="nome"
-          name="nome"
-          class="bg-transparent border border-blue-400 text-white px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500"
-          placeholder="Digite seu nome completo"
-        />
+      <div class="mt-4">
+        <p class="text-slate-400 text-center">
+          Entre em contato para dúvidas, sugestões, orçamentos ou suporte.
+        </p>
       </div>
 
-      <div class="flex flex-col">
-        <label class="text-sm text-blue-400 mb-1" for="mensagem">Mensagem</label>
-        <textarea
-          id="mensagem"
-          name="mensagem"
-          rows="4"
-          class="bg-transparent border border-blue-400 text-white px-4 py-2 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-cyan-500"
-          placeholder="Digite sua mensagem"
+      <!-- Formulário de Contato -->
+      <form class="mt-8 flex flex-col gap-6 w-full">
+        <div class="flex flex-col">
+          <label class="text-sm text-blue-400 mb-1" for="nome">Nome</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            class="bg-transparent border border-blue-400 text-white px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500"
+            placeholder="Digite seu nome completo"
+          />
+        </div>
 
-          
-        ></textarea>
+        <div class="flex flex-col">
+          <label class="text-sm text-blue-400 mb-1" for="mensagem">Mensagem</label>
+          <textarea
+            id="mensagem"
+            name="mensagem"
+            rows="4"
+            class="bg-transparent border border-blue-400 text-white px-4 py-2 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-cyan-500"
+            placeholder="Digite sua mensagem"
+          ></textarea>
+        </div>
 
         <a href="https://github.com/N-Tx" target="_blank"
-         class="m-3 inline-flex items-center px-5 mt-10 py-3 text-white font-medium rounded-md bg-gradient-to-r from-[#0f172a] to-[#0284c7] hover:opacity-90 transition w-32">
-        Enviar 
-        <svg class="ml-2 w-4 h-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M6.707 16.707a1 1 0 010-1.414L12.586 10 6.707 4.707a1 1 0 011.414-1.414l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-        </svg>
-      </a>
-      </div>
-     
+          class="inline-flex items-center px-5 py-3 text-white font-medium rounded-md bg-gradient-to-r from-[#0f172a] to-[#0284c7] hover:opacity-90 transition w-32 self-center mt-4">
+          Enviar 
+          <svg class="ml-2 w-4 h-4 fill-current" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M6.707 16.707a1 1 0 010-1.414L12.586 10 6.707 4.707a1 1 0 011.414-1.414l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </form>
+    </div>
+  </section>
+
+</div>
+
+
+<footer class="bg-slate-950 text-white text-center py-6 mt-20">
+  <div class="container mx-auto px-4">
+    <p class="text-sm">&copy; 2025 Nathan Teixeira. Todos os direitos reservados.</p>
+    <p class="text-xs text-slate-400 mt-1">Living, learning, & leveling up one day at a time.</p>
+    <p class="text-xs text-slate-400 mt-1">Desenvolvido usando Tailwind CSS</p>
+  </div>
+</footer>
 
 
 
+
+<!-- Botão para voltar ao topo -->
+<a href="#topo" 
+   class="fixed bottom-4 right-4 bg-slate-950 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-600 transition ">
+   top
+</a>
+
+<!-- No topo da sua página -->
+<div id="topo"></div>
 
 
 
