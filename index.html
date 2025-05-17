@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio</title>
+    <title>Portfólio </title>
     <script src="https://cdn.tailwindcss.com"></script> <!-- CDN do Tailwind -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    
-    
+    <link rel="icon" href="img/favicon.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 
 
 <section id="topo"></section>
+
 <body class="Corpo bg-slate-900 w-full ">
 
 
@@ -23,7 +23,7 @@
 
 
   <!-- header/nav-->
- <header class="hidden 2xl:block w-full bg-slate-950 p-5">
+ <header class="hidden min-[1600px]:block w-full bg-slate-950 p-5">
   <div class="max-w-screen-xl mx-auto flex justify-between items-center px-4">
     <h3 class="text-white font-mono font-bold text-xl">Nathan Teixeira</h3>
     <ul class="flex space-x-8 text-white">
@@ -38,18 +38,19 @@
 
 
 
-<!--  menu mobile-->
-<header class="block 2xl:hidden w-full bg-blue-950 p-5 ">
-    <div class="w-full flex justify-between items-center px-4">
-      <h3 class="text-white font-mono font-bold text-lg">Nathan T.</h3>
-      <button id="mobile-menu-toggle" class="text-white">☰</button>
-    </div>
-    <ul id="mobile-menu" class="hidden w-full mt-4 text-white px-4">
-      <li><a href="#about" class="hover:underline">Sobre mim</a></li>
-      <li><a href="#service" class="hover:underline">Serviços</a></li>
-      <li><a href="#habilidadades" class="hover:underline">Skills</a></li>
-      <li><a href="#contacts" class="hover:underline">Contatos</a></li>
-    </ul>
+<!-- menu mobile -->
+<header class="block min-[1600px]:hidden w-full bg-blue-950 p-5">
+  <div class="w-full flex justify-between items-center px-4">
+    <h3 class="text-white font-mono font-bold text-lg">Nathan T.</h3>
+    <button id="mobile-menu-toggle" class="text-white text-2xl">☰</button>
+  </div>
+
+  <ul id="mobile-menu" class="transition-all duration-300 ease-in-out opacity-0 max-h-0 overflow-hidden flex flex-col w-full mt-4 text-white px-4 space-y-4">
+    <li><a href="#about" class="hover:underline block py-2">Sobre mim</a></li>
+    <li><a href="#service" class="hover:underline block py-2">Serviços</a></li>
+    <li><a href="#habilidadades" class="hover:underline block py-2">Skills</a></li>
+    <li><a href="#contacts" class="hover:underline block py-2">Contatos</a></li>
+  </ul>
 </header>
 
 <!-- script menu -->
@@ -58,13 +59,19 @@
   const menu = document.getElementById('mobile-menu');
 
   toggle.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
+    if (menu.classList.contains('opacity-0')) {
+      menu.classList.remove('opacity-0', 'max-h-0', 'overflow-hidden');
+      menu.classList.add('opacity-100', 'max-h-96');
+    } else {
+      menu.classList.add('opacity-0', 'max-h-0', 'overflow-hidden');
+      menu.classList.remove('opacity-100', 'max-h-96');
+    }
   });
 </script>
 
 <!-- apresentação -->
  <section id="about_me">
-<div class="ml-[300px] px-[100px] mt-28 hidden 2xl:block ">
+<div class="ml-[300px] px-[100px] mt-28 hidden min-[1600px]:block ">
         <h1 class="Hello text-white font-mono text-2xl m-3">Olá, eu sou</h1>
         <h1 class="Nome text-blue-500 text-4xl font-bold mt-3 m-3">Nathan Teixeira</h1>
         <p class="text-2xl text-slate-200
@@ -83,7 +90,7 @@
 
 
 <!-- apresentação mobile -->
-<section class="presentation block 2xl:hidden text-center p-20  ">
+<section class="presentation block min-[1600px]:hidden text-center p-20  ">
   <div>
 
     <h1 class="Hello text-white font-mono text-2xl  ">Olá eu sou</h1>
@@ -100,7 +107,7 @@
 <!-- imagem1 -->
 <section class="imagem_1">
   
-  <div class="absolute top-32 left-[70rem] hidden 2xl:block">
+  <div class="absolute top-32 left-[70rem] hidden min-[1600px]:block">
         <lottie-player 
           src="img/animation.json"
           background="transparent"
@@ -116,7 +123,7 @@
 
 
  <!-- About me -->
-<section class="about_me hidden 2xl:block">
+<section class="about_me hidden min-[1600px]:block">
   
   <div>
 
@@ -146,7 +153,8 @@
 
  <section class="imagem_1">
   
-  <div class="flex md:hidden justify-center">
+  <div class="flex min-[1600px]:hidden justify-center">
+
 
         <lottie-player 
           src="img/animation.json"
@@ -169,7 +177,7 @@
 
 
  <!-- About me mobile -->
-<section class="about_me_mobile block 2xl:hidden text-center mt-40 m-10">
+<section class="about_me_mobile block min-[1600px]:hidden text-center mt-40 m-10">
   <div>
     <div class="relative inline-block">
       <h1 class="text-[2rem] font-poppins text-white font-bold">
@@ -191,7 +199,7 @@
 <!--Imagem2-->
 <section>
   
-   <div class=" w-96 h-auto ml-[300px]  hidden 2xl:block  ">
+   <div class=" w-96 h-auto ml-[300px]  hidden  min-[1600px]:block  ">
       <img src="img/img_tec_att.png" alt="imagem flutuante" class="animate-float w-full h-auto">
     </div>
       
@@ -385,7 +393,7 @@
           ></textarea>
         </div>
 
-        <a href="https://github.com/N-Tx" target="_blank"
+        <a href="mailto:nathanoliveirafacul@gmail.com?subject=Proposta&body=Olá,%20tenho%20uma%20proposta%20para%20você." target="_blank"
           class="inline-flex items-center px-5 py-3 text-white font-medium rounded-md bg-gradient-to-r from-[#0f172a] to-[#0284c7] hover:opacity-90 transition w-32 self-center mt-4">
           Enviar 
           <svg class="ml-2 w-4 h-4 fill-current" viewBox="0 0 20 20">
